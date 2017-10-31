@@ -6,9 +6,9 @@ import sklearn
 import sklearn.datasets 
 import sklearn.linear_model 
 import matplotlib 
- 
+from IPython import embed
 # Display plots inline and change default figure size 
-%matplotlib inline 
+# %matplotlib inline 
 matplotlib.rcParams['figure.figsize'] = (10.0, 8.0) 
  
 # %% 2 
@@ -20,7 +20,7 @@ plt.scatter(X[:,0], X[:,1], s=40, c=y, cmap=plt.cm.Spectral)
 # Train the logistic rgeression classifier 
 clf = sklearn.linear_model.LogisticRegressionCV() 
 clf.fit(X, y) 
- 
+
 # %% 4 
 # Helper function to plot a decision boundary. 
 # If you don't fully understand this function don't worry, it just generates the contour plot below. 
@@ -144,7 +144,7 @@ model = build_model(3, print_loss=True)
 # Plot the decision boundary 
 plot_decision_boundary(lambda x: predict(model, x)) 
 plt.title("Decision Boundary for hidden layer size 3") 
- 
+
 # %% 14 
 plt.figure(figsize=(16, 32)) 
 hidden_layer_dimensions = [1, 2, 3, 4, 5, 20, 50] 
